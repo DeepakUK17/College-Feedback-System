@@ -25,7 +25,7 @@ export default function Header({ type = 'default' }) {
     return (
         <header className="app-header" style={{ paddingBottom: 0 }}>
             <div className="header-inner">
-                <img src="/logo.jpg" alt="KAHE Logo" className="header-logo" style={{ borderRadius: '10px', objectFit: 'contain', background: 'white' }} />
+                <img src={import.meta.env.BASE_URL + 'logo.jpg'} alt="KAHE Logo" className="header-logo" style={{ borderRadius: '10px', objectFit: 'contain', background: 'white' }} />
                 <div className="header-titles">
                     <h1>Karpagam Academy of Higher Education</h1>
                     <p>Enable | Enlighten | Enrich · (Deemed to be University)</p>

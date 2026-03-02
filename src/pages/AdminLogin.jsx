@@ -53,7 +53,7 @@ export default function AdminLogin() {
         <div className="login-page">
             <div className="login-box">
                 <div className="login-logo-wrap">
-                    <img src="/logo.jpg" alt="KAHE Logo" className="login-logo" style={{ borderRadius: '12px', objectFit: 'contain', background: 'white' }} />
+                    <img src={import.meta.env.BASE_URL + 'logo.jpg'} alt="KAHE Logo" className="login-logo" style={{ borderRadius: '12px', objectFit: 'contain', background: 'white' }} />
                     <div className="login-college-name">Karpagam Academy of Higher Education</div>
                     <div className="login-college-sub">(Deemed to be University)</div>
                 </div>

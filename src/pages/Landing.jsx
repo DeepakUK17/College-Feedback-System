@@ -32,7 +32,7 @@ export default function Landing() {
                 alignItems: 'center',
                 justifyContent: 'center',
             }}>
-                <img src="/logo.jpg" alt="KAHE Logo" style={{ width: '100px', height: '100px', borderRadius: '12px', objectFit: 'contain' }} />
+                <img src={import.meta.env.BASE_URL + 'logo.jpg'} alt="KAHE Logo" style={{ width: '100px', height: '100px', borderRadius: '12px', objectFit: 'contain' }} />
             </div>
 
             {/* Title */}
