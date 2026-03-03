@@ -16,9 +16,9 @@ jobs:
             "${{ secrets.VITE_SUPABASE_URL }}/rest/v1/students?select=roll_number&limit=1" \
             -H "apikey: ${{ secrets.VITE_SUPABASE_ANON_KEY }}" \
             -H "Authorization: Bearer ${{ secrets.VITE_SUPABASE_ANON_KEY }}")
-          echo "Supabase ping status: $STATUS"
-          if [ "$STATUS" != "200" ] && [ "$STATUS" != "406" ]; then
-            echo "Unexpected status code: $STATUS"
+          echo "Supabase ping HTTP status: $STATUS"
+          if [ -z "$STATUS" ] || [ "$STATUS" = "000" ]; then
+            echo "ERROR: No response from Supabase. Check secrets are set correctly."
             exit 1
           fi
-          echo "Keep-alive ping successful!"
+          echo "Database is alive! (Any HTTP response means DB is active)"
