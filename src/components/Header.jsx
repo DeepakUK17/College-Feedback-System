@@ -41,41 +41,6 @@ export default function Header({ type = 'default' }) {
                     </div>
                 )}
             </div>
-            {/* Developer credit strip */}
-            <div style={{
-                textAlign: 'center',
-                fontSize: '0.65rem',
-                padding: '3px 12px 5px',
-                background: 'rgba(0,0,0,0.15)',
-                color: 'rgba(255,255,255,0.55)',
-                borderTop: '1px solid rgba(255,255,255,0.08)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '4px',
-            }}>
-                <span>Developed by</span>
-                <a href={PORTFOLIO} target="_blank" rel="noopener noreferrer"
-                    style={{ color: '#7dd3fc', fontWeight: 700, textDecoration: 'none' }}
-                    onMouseEnter={e => e.currentTarget.style.textDecoration = 'underline'}
-                    onMouseLeave={e => e.currentTarget.style.textDecoration = 'none'}>
-                    Deepak U K
-                </a>
-                <span style={{ opacity: 0.5 }}>·</span>
-                <a href={PORTFOLIO} target="_blank" rel="noopener noreferrer"
-                    style={{ color: '#7dd3fc', fontWeight: 600, textDecoration: 'none' }}
-                    onMouseEnter={e => e.currentTarget.style.textDecoration = 'underline'}
-                    onMouseLeave={e => e.currentTarget.style.textDecoration = 'none'}>
-                    24BTAD013
-                </a>
-                <span style={{ opacity: 0.5 }}>·</span>
-                <a href={PORTFOLIO} target="_blank" rel="noopener noreferrer"
-                    style={{ color: '#93c5fd', fontStyle: 'italic', textDecoration: 'none' }}
-                    onMouseEnter={e => e.currentTarget.style.textDecoration = 'underline'}
-                    onMouseLeave={e => e.currentTarget.style.textDecoration = 'none'}>
-                    Portfolio ↗
-                </a>
-            </div>
         </header>
     );
 }

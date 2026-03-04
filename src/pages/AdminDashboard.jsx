@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../supabase';
 import Header from '../components/Header';
+import DevCredit from '../components/DevCredit';
 import { parseAndUploadCSV } from '../utils/csvParser';
 import { generatePDFReport } from '../utils/pdfReport';
 
@@ -362,6 +363,11 @@ export default function AdminDashboard() {
                     </div>
                 </div>
             )}
+
+            {/* Footer */}
+            <footer style={{ borderTop: '1px solid var(--border)', marginTop: '40px', paddingBottom: '8px', background: 'var(--surface)' }}>
+                <DevCredit withCopyright />
+            </footer>
         </div>
     );
 }

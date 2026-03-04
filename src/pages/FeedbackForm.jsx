@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '../supabase';
 import Header from '../components/Header';
+import DevCredit from '../components/DevCredit';
 
 const QUESTIONS = [
     'Punctual to the Class and Handling the class for entire Duration',
@@ -148,7 +149,7 @@ export default function FeedbackForm() {
                             onClick={() => navigate('/student/dashboard')}
                             style={{ background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.3)', color: 'white', borderRadius: '8px', padding: '5px 12px', cursor: 'pointer', fontSize: '0.8rem', fontFamily: 'inherit', flexShrink: 0 }}
                         >← Back</button>
-                        <h2 style={{ margin: 0,color: 'white', fontSize: isMobile ? '0.95rem' : '1.05rem', fontWeight: 700 }}>📋 Feedback Form</h2>
+                        <h2 style={{ margin: 0, color: 'white', fontSize: isMobile ? '0.95rem' : '1.05rem', fontWeight: 700 }}>📋 Feedback Form</h2>
                     </div>
                     {/* Info grid — 1 col on mobile, 2 col on desktop */}
                     <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '6px 16px', fontSize: '0.82rem' }}>
@@ -338,6 +339,19 @@ export default function FeedbackForm() {
                 </div>
 
             </div>
+
+            {/* Footer */}
+            <footer style={{
+                borderTop: '1px solid rgba(0,0,0,0.07)',
+                marginTop: '32px',
+                paddingBottom: '8px',
+            }}>
+                <div style={{ width: '60px', height: '2px', background: '#D1E7D4', borderRadius: '2px', margin: '0 auto 4px' }} />
+                <p style={{ color: '#A0AEC0', fontSize: '0.7rem', textAlign: 'center', margin: '8px 0 0', padding: '0 16px' }}>
+                    © 2026 Karpagam Academy of Higher Education – Feedback System
+                </p>
+                <DevCredit />
+            </footer>
         </div>
     );
 }

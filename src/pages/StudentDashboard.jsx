@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../supabase';
 import Header from '../components/Header';
+import DevCredit from '../components/DevCredit';
 
 export default function StudentDashboard() {
     const [assignments, setAssignments] = useState([]);
@@ -172,6 +173,20 @@ export default function StudentDashboard() {
                     )}
                 </div>
             </div>
+
+            {/* Footer */}
+            <footer style={{
+                borderTop: '1px solid var(--border)',
+                marginTop: '40px',
+                paddingBottom: '8px',
+                background: 'var(--surface)',
+            }}>
+                <div style={{ width: '60px', height: '2px', background: 'var(--border)', borderRadius: '2px', margin: '0 auto 4px' }} />
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.7rem', textAlign: 'center', margin: '8px 0 0', padding: '0 16px' }}>
+                    © 2026 Karpagam Academy of Higher Education – Feedback System
+                </p>
+                <DevCredit />
+            </footer>
         </div>
     );
 }
