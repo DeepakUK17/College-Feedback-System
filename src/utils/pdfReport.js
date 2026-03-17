@@ -172,22 +172,7 @@ export async function generatePDFReport(session, assignments, responses) {
     const BOTTOM_MARGIN = 16; // space reserved for page footer text
     const usablePageH = pageH - BOTTOM_MARGIN;
 
-    // ── COMMENTS TABLE ─────────────────────────────────────────────
-    const commentsBySubject = {};
-    responses.forEach(r => {
-        if (r.comments && r.comments.trim() !== '') {
-            if (!commentsBySubject[r.subject_code]) {
-                const assign = assignments.find(a => a.id === r.assignment_id) || {};
-                commentsBySubject[r.subject_code] = {
-                    subject_code: r.subject_code,
-                    subject_name: assign.subject_name || '',
-                    staff_name: assign.staff_name || r.staff_id,
-                    comments: []
-                };
-            }
-            commentsBySubject[r.subject_code].comments.push(r.comments.trim());
-        }
-    });
+    
 
     const commentsData = [];
     Object.values(commentsBySubject).forEach(sub => {
